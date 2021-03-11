@@ -4,7 +4,9 @@ const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
-});
+})
+.then(()=>{console.log("monogo connected- exercise")})
+.catch(()=>{console.log("monogo is not connected")})
 const exerciseSchema = new mongoose.Schema({
     userId: {
         type: String,
