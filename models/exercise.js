@@ -23,6 +23,10 @@ const exerciseSchema = new mongoose.Schema({
     date: {
         type: Date,
         default: new Date()
+    },
+    count:{
+        type: Number,
+        default: 0
     }
 });
 
