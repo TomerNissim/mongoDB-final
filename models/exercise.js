@@ -8,10 +8,7 @@ mongoose.connect(process.env.MONGO_URI, {
 .then(()=>{console.log("monogo connected- exercise")})
 .catch(()=>{console.log("monogo is not connected")})
 const exerciseSchema = new mongoose.Schema({
-    userId: {
-        type: String,
-        require: true
-    },
+   
     description: {
         type: String,
         require: true
@@ -21,12 +18,7 @@ const exerciseSchema = new mongoose.Schema({
         require: true
     },
     date: {
-        type: Date,
-        default: new Date()
-    },
-    count:{
-        type: Number,
-        default: 0
+        type: String,
     }
 });
 
